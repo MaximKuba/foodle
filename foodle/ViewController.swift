@@ -8,26 +8,42 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UITextFieldDelegate {
     
     //MARK: Properti
-    @IBOutlet weak var nameLab: UILabel!
-    @IBOutlet weak var registrationLab: UILabel!
-    @IBOutlet weak var usernameLab: UILabel!
-    @IBOutlet weak var mailLab: UILabel!
-    @IBOutlet weak var passLab: UILabel!
-    @IBOutlet weak var usernameTF: TextField!
-    @IBOutlet weak var mailTF: TextField!
-    @IBOutlet weak var passTF: TextField!
+    
+    @IBOutlet weak var emailTF: TextField!
+    
+    @IBOutlet weak var passwordTF: TextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.emailTF.delegate = self
+        self.passwordTF.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    //press outside keyboard
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    //press return key
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        emailTF.resignFirstResponder()
+        passwordTF.resignFirstResponder()
+        return (true)
+        
+    }
+    
+    override var prefersStatusBarHidden: Bool{
+        return true
     }
 
 

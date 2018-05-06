@@ -15,7 +15,7 @@ class TextField: UITextField {
         
         let border = CALayer()
         let width = CGFloat(2.0)
-        border.borderColor = UIColor.darkGray.cgColor
+        border.borderColor = UIColor.white.cgColor
         border.frame = CGRect(
             x: 0,
             y: self.frame.size.height - width,
