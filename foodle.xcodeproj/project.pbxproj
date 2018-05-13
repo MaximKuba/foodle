@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		8D4C10782095D675002B8359 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4C10772095D675002B8359 /* TextField.swift */; };
+		8D59FE5B20A7142900768C52 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D59FE5A20A7142900768C52 /* MainViewController.swift */; };
+		8D59FE5D20A7188600768C52 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D59FE5C20A7188600768C52 /* MyViewController.swift */; };
+		8D59FE5F20A72CD900768C52 /* Register_2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D59FE5E20A72CD900768C52 /* Register_2ViewController.swift */; };
+		8D59FE6120A83F6D00768C52 /* MyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D59FE6020A83F6D00768C52 /* MyLabel.swift */; };
+		8D86309920A6F8E800EFFB65 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D86309820A6F8E800EFFB65 /* RegisterViewController.swift */; };
 		8DC68B312095F81F005B7A8D /* Trumpit.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8DC68B302095F81F005B7A8D /* Trumpit.otf */; };
 		8DD9215520921E3700A0BF39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9215420921E3700A0BF39 /* AppDelegate.swift */; };
 		8DD9215720921E3700A0BF39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9215620921E3700A0BF39 /* ViewController.swift */; };
@@ -38,6 +43,11 @@
 
 /* Begin PBXFileReference section */
 		8D4C10772095D675002B8359 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		8D59FE5A20A7142900768C52 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		8D59FE5C20A7188600768C52 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
+		8D59FE5E20A72CD900768C52 /* Register_2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register_2ViewController.swift; sourceTree = "<group>"; };
+		8D59FE6020A83F6D00768C52 /* MyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLabel.swift; sourceTree = "<group>"; };
+		8D86309820A6F8E800EFFB65 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8DC68B302095F81F005B7A8D /* Trumpit.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Trumpit.otf; sourceTree = "<group>"; };
 		8DD9215120921E3700A0BF39 /* foodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = foodle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD9215420921E3700A0BF39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,15 +113,20 @@
 		8DD9215320921E3700A0BF39 /* foodle */ = {
 			isa = PBXGroup;
 			children = (
-				8DC68B302095F81F005B7A8D /* Trumpit.otf */,
 				8DD9215420921E3700A0BF39 /* AppDelegate.swift */,
 				8DD9215620921E3700A0BF39 /* ViewController.swift */,
+				8D59FE5A20A7142900768C52 /* MainViewController.swift */,
+				8D86309820A6F8E800EFFB65 /* RegisterViewController.swift */,
+				8D59FE5E20A72CD900768C52 /* Register_2ViewController.swift */,
 				8DD9215820921E3700A0BF39 /* Main.storyboard */,
 				8DD9215E20921E3900A0BF39 /* Assets.xcassets */,
 				8DD9216020921E3900A0BF39 /* LaunchScreen.storyboard */,
 				8DD9216320921E3900A0BF39 /* Info.plist */,
 				8DD9215B20921E3700A0BF39 /* foodle.xcdatamodeld */,
 				8D4C10772095D675002B8359 /* TextField.swift */,
+				8D59FE6020A83F6D00768C52 /* MyLabel.swift */,
+				8D59FE5C20A7188600768C52 /* MyViewController.swift */,
+				8DC68B302095F81F005B7A8D /* Trumpit.otf */,
 			);
 			path = foodle;
 			sourceTree = "<group>";
@@ -267,8 +282,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DD9215720921E3700A0BF39 /* ViewController.swift in Sources */,
+				8D86309920A6F8E800EFFB65 /* RegisterViewController.swift in Sources */,
+				8D59FE6120A83F6D00768C52 /* MyLabel.swift in Sources */,
 				8DD9215D20921E3700A0BF39 /* foodle.xcdatamodeld in Sources */,
+				8D59FE5D20A7188600768C52 /* MyViewController.swift in Sources */,
+				8D59FE5B20A7142900768C52 /* MainViewController.swift in Sources */,
 				8DD9215520921E3700A0BF39 /* AppDelegate.swift in Sources */,
+				8D59FE5F20A72CD900768C52 /* Register_2ViewController.swift in Sources */,
 				8D4C10782095D675002B8359 /* TextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
