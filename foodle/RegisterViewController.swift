@@ -13,42 +13,41 @@ class RegisterViewController: MyViewController, UITextFieldDelegate {
     //MARK: Proprties
     
     @IBOutlet weak var nameTF: TextField!
+    @IBOutlet weak var EmailTF: TextField!
+    @IBOutlet weak var PasswordTF: TextField!
+    @IBOutlet weak var RePasswordTF: TextField!
     
+    //MARK: EndOfProperties
     //MARK: Actions
     
-    @IBAction func secondReg(_ sender: UIButton) {
+    @IBAction func toSecondReg(_ sender: UIButton) {
         performSegue(withIdentifier: "secondRegSeque", sender: self)
     }
+    //MARK: EndOfActions
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.nameTF.delegate = self
-
-        // Do any additional setup after loading the view.
+        self.EmailTF.delegate = self
+        self.PasswordTF.delegate = self
+        self.RePasswordTF.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         nameTF.resignFirstResponder()
+        EmailTF.resignFirstResponder()
+        PasswordTF.resignFirstResponder()
+        RePasswordTF.resignFirstResponder()
         
         return (true)
-        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

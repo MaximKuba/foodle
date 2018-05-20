@@ -22,12 +22,22 @@ class ViewController: MyViewController,UITextFieldDelegate {
         self.emailTF.delegate = self
         self.passwordTF.delegate = self
     }
+    
+    //MARK: EndOfProperties
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
-    //MARK: Actions
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        emailTF.resignFirstResponder()
+        passwordTF.resignFirstResponder()
+        return (true)
+        
+    }
+    
+    //MARK: Actions/Seque
     
     @IBAction func enterMainPage(_ sender: UIButton) {
         performSegue(withIdentifier: "mainPageSeque", sender: self)
@@ -38,27 +48,13 @@ class ViewController: MyViewController,UITextFieldDelegate {
     @IBAction func register(_ sender: UIButton) {
         performSegue(withIdentifier: "registerSeque", sender: self)
     }
+    //MARK: EndOfActions
     
     
     
-    //press outside keyboard
     
-    /*override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }*/
     
-    //press return key
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        emailTF.resignFirstResponder()
-        passwordTF.resignFirstResponder()
-        return (true)
-        
-    }
-    
-    /*override var prefersStatusBarHidden: Bool{
-        return true
-    }*/
 
 
 }

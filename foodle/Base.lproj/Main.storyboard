@@ -114,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="138" y="124"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="q8D-vj-IEC">
@@ -167,9 +167,8 @@
                                     <color key="titleColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="enterMainPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5X9-8M-zHS"/>
-                                    <action selector="secondReg:" destination="45M-Zn-ZKo" eventType="touchUpInside" id="35J-On-w3Q"/>
-                                    <segue destination="M3H-Yt-xEK" kind="show" identifier="secondRegSeque" animates="NO" id="5bE-yF-3EQ"/>
+                                    <action selector="toSecondReg:" destination="45M-Zn-ZKo" eventType="touchUpInside" id="9Wb-6d-SNW"/>
+                                    <segue destination="M3H-Yt-xEK" kind="show" identifier="secondRegSeque" animates="NO" id="w2c-fM-Vf6"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="2I0-Hx-K1V">
@@ -205,7 +204,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
                                         <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -217,7 +216,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
                                         <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -239,7 +238,7 @@
                                     <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" animates="NO" id="Gjw-sS-1ii"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" animates="NO" id="ha6-1b-cvg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -247,12 +246,15 @@
                         <viewLayoutGuide key="safeArea" id="n5G-Sn-O5e"/>
                     </view>
                     <connections>
+                        <outlet property="EmailTF" destination="AuB-QQ-gbD" id="cC9-GF-duj"/>
+                        <outlet property="PasswordTF" destination="hKB-Nr-2sf" id="Tmf-gq-aPS"/>
+                        <outlet property="RePasswordTF" destination="TSg-4y-121" id="Xm9-tE-trY"/>
                         <outlet property="nameTF" destination="LyQ-OQ-Q1B" id="nCX-2f-j5E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hbT-YO-CO2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="997.60000000000002" y="133.5832083958021"/>
+            <point key="canvasLocation" x="998" y="124"/>
         </scene>
         <!--Register2 View Controller-->
         <scene sceneID="eba-vf-a9x">
@@ -275,8 +277,8 @@
                                     <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="backToEnterPage:" destination="M3H-Yt-xEK" eventType="touchUpInside" id="YNu-c7-asb"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="Backfromreg_2Seq" animates="NO" id="Q5s-5x-UUy"/>
+                                    <action selector="backToLogin:" destination="M3H-Yt-xEK" eventType="touchUpInside" id="SVL-aR-rOL"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="backToLoginSeque" animates="NO" id="dl6-LG-xhx"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Вже зареєстровані?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDb-Kc-grr">
@@ -296,8 +298,7 @@
                                 </state>
                                 <connections>
                                     <action selector="enterMainPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J5W-S6-dqJ"/>
-                                    <action selector="secondReg:" destination="45M-Zn-ZKo" eventType="touchUpInside" id="qol-o8-7bN"/>
-                                    <segue destination="45M-Zn-ZKo" kind="show" animates="NO" id="aSb-5o-5Du"/>
+                                    <segue destination="45M-Zn-ZKo" kind="show" animates="NO" id="yJ1-5s-ZFX"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ріст:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VF6-B0-dsH" customClass="TextField" customModule="foodle" customModuleProvider="target">
@@ -356,8 +357,8 @@
                                     <color key="titleColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="enterMainPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tiy-aa-AhP"/>
-                                    <action selector="secondReg:" destination="45M-Zn-ZKo" eventType="touchUpInside" id="gPo-nt-wJi"/>
+                                    <action selector="toIllnesReg:" destination="M3H-Yt-xEK" eventType="touchUpInside" id="oty-0i-7Qk"/>
+                                    <segue destination="dyl-Ac-7cQ" kind="show" identifier="IllnesRegSeque" animates="NO" id="5Qb-GO-K9M"/>
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="t0n-G3-GHv">
@@ -373,10 +374,574 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="BpQ-ci-Usx"/>
                     </view>
+                    <connections>
+                        <outlet property="ageTF" destination="T5M-ET-Wni" id="6VB-8I-dTa"/>
+                        <outlet property="heightTF" destination="VF6-B0-dsH" id="np9-7i-v6k"/>
+                        <outlet property="weightTF" destination="bbp-mh-tpL" id="Lp9-uf-35h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P0b-6o-nTT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1768.8" y="133.5832083958021"/>
+            <point key="canvasLocation" x="1786" y="124"/>
+        </scene>
+        <!--Illnesreg View Controller-->
+        <scene sceneID="QOP-hn-pa7">
+            <objects>
+                <viewController id="dyl-Ac-7cQ" customClass="IllnesregViewController" customModule="foodle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mov-ko-IDG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="1BZ-Us-gEX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4r3-Sd-yUb" customClass="MyButton" customModule="foodle" customModuleProvider="target">
+                                <rect key="frame" x="236" y="192" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="панкреатит">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedB2:" destination="dyl-Ac-7cQ" eventType="touchUpInside" id="GnW-T6-A41"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPU-0e-sLx" customClass="MyButton" customModule="foodle" customModuleProvider="target">
+                                <rect key="frame" x="165" y="230" width="164" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="виразка шлунку">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedB4:" destination="dyl-Ac-7cQ" eventType="touchUpInside" id="feg-b0-TPz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPN-an-8Jf" customClass="MyButton" customModule="foodle" customModuleProvider="target">
+                                <rect key="frame" x="230" y="268" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="панкреатит">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedB6:" destination="dyl-Ac-7cQ" eventType="touchUpInside" id="KXs-NH-jht"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U6a-T5-fJ9" customClass="MyButton" customModule="foodle" customModuleProvider="target">
+                                <rect key="frame" x="165" y="306" width="163" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="виразка шлунку">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedB8:" destination="dyl-Ac-7cQ" eventType="touchUpInside" id="z6t-ES-Q7G"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3N-2B-clg" customClass="MyButton" customModule="foodle" customModuleProvider="target">
+                                <rect key="frame" x="165" y="382" width="163" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="виразка шлунку">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedB12:" destination="dyl-Ac-7cQ" eventType="touchUpInside" id="g8F-Wc-Je7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zei-Wr-ism" customClass="MyButton" customModule="foodle" customModuleProvider="target">
+                                <rect key="frame" x="230" y="420" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="панкреатит">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedB14:" destination="dyl-Ac-7cQ" eventType="touchUpInside" id="7Pr-nx-mrF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8R-jo-jkN" customClass="MyButton" customModule="foodle" customModuleProvider="target">
+                                <rect key="frame" x="165" y="458" width="163" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="виразка шлунку">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedB16:" destination="dyl-Ac-7cQ" eventType="touchUpInside" id="fMr-2J-huK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYP-ux-4JC" customClass="MyButton" customModule="foodle" customModuleProvider="target">
+                                <rect key="frame" x="52" y="458" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="гепатит Б">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedB15:" destination="dyl-Ac-7cQ" eventType="touchUpInside" id="eLu-Hs-1ye"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4k1-ib-pjV" customClass="MyButton" customModule="foodle" customModuleProvider="target">
+                                <rect key="frame" x="52" y="420" width="164" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="цукровий діабет">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedB13:" destination="dyl-Ac-7cQ" eventType="touchUpInside" id="1V5-jn-hUB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24d-Vf-ok0" customClass="MyButton" customModule="foodle" customModuleProvider="target">
+                                <rect key="frame" x="52" y="382" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="гепатит А">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedB11:" destination="dyl-Ac-7cQ" eventType="touchUpInside" id="ytB-zb-pgt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDe-jY-8lQ" customClass="MyButton" customModule="foodle" customModuleProvider="target">
+                                <rect key="frame" x="52" y="344" width="164" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="цукровий діабет">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedB9:" destination="dyl-Ac-7cQ" eventType="touchUpInside" id="nuv-fL-y42"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5AK-sy-u8U" customClass="MyButton" customModule="foodle" customModuleProvider="target">
+                                <rect key="frame" x="52" y="306" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="гепатит Б">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedB7:" destination="dyl-Ac-7cQ" eventType="touchUpInside" id="0wQ-Yj-shE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Csa-Iq-iSb" customClass="MyButton" customModule="foodle" customModuleProvider="target">
+                                <rect key="frame" x="52" y="268" width="164" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="цукровий діабет">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedB5:" destination="dyl-Ac-7cQ" eventType="touchUpInside" id="cyF-F3-ouw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ulk-UN-rJk" customClass="MyButton" customModule="foodle" customModuleProvider="target">
+                                <rect key="frame" x="52" y="230" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="гепатит А">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedB3:" destination="dyl-Ac-7cQ" eventType="touchUpInside" id="NYv-LH-zxA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGN-pT-01t">
+                                <rect key="frame" x="160" y="610" width="56" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Ввійти">
+                                    <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backToLogin:" destination="M3H-Yt-xEK" eventType="touchUpInside" id="hCM-wS-oks"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Вже зареєстровані?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GpL-gx-ts2">
+                                <rect key="frame" x="106" y="581" width="162" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54d-jX-xhu">
+                                <rect key="frame" x="52" y="528" width="134" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="НАЗАД">
+                                    <color key="titleColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="enterMainPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="teV-6f-4bK"/>
+                                    <segue destination="M3H-Yt-xEK" kind="show" animates="NO" id="8Da-m9-V61"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Evc-HX-5kc">
+                                <rect key="frame" x="109" y="20" width="157" height="111"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rE-er-eGQ">
+                                <rect key="frame" x="194" y="528" width="134" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="ДАЛІ">
+                                    <color key="titleColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="enterMainPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FFs-dX-8zf"/>
+                                    <action selector="toAllergiReg:" destination="dyl-Ac-7cQ" eventType="touchUpInside" id="vc6-Kx-GzY"/>
+                                    <segue destination="rub-Bs-2hM" kind="show" identifier="AllergiRegSeque" animates="NO" id="gvK-UE-qOq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Оберіть ваші захворювання зі списку:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sz-uf-4VO">
+                                <rect key="frame" x="38" y="151" width="304" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5da-ee-1Kt" customClass="MyButton" customModule="foodle" customModuleProvider="target">
+                                <rect key="frame" x="52" y="192" width="164" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="цукровий діабет">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedB1:" destination="dyl-Ac-7cQ" eventType="touchUpInside" id="sZa-vB-6yw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7RY-4Z-8dl" customClass="MyButton" customModule="foodle" customModuleProvider="target">
+                                <rect key="frame" x="230" y="344" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="панкреатит">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedB10:" destination="dyl-Ac-7cQ" eventType="touchUpInside" id="dyP-dR-43c"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="0Wz-rU-rgZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="button1" destination="5da-ee-1Kt" id="MJb-N3-E3c"/>
+                        <outlet property="button10" destination="7RY-4Z-8dl" id="LWo-6z-2AW"/>
+                        <outlet property="button11" destination="24d-Vf-ok0" id="Txs-Ob-C0M"/>
+                        <outlet property="button12" destination="V3N-2B-clg" id="MoK-G0-JWg"/>
+                        <outlet property="button13" destination="4k1-ib-pjV" id="u8G-sf-h6e"/>
+                        <outlet property="button14" destination="Zei-Wr-ism" id="vBt-c1-XHK"/>
+                        <outlet property="button15" destination="QYP-ux-4JC" id="5V0-aA-H04"/>
+                        <outlet property="button16" destination="m8R-jo-jkN" id="Qcw-o6-tmb"/>
+                        <outlet property="button2" destination="4r3-Sd-yUb" id="KJM-fv-NkT"/>
+                        <outlet property="button3" destination="Ulk-UN-rJk" id="gee-ZG-Q92"/>
+                        <outlet property="button4" destination="wPU-0e-sLx" id="l3U-T2-n2S"/>
+                        <outlet property="button5" destination="Csa-Iq-iSb" id="syB-0C-TiA"/>
+                        <outlet property="button6" destination="cPN-an-8Jf" id="qCm-mw-ZJF"/>
+                        <outlet property="button7" destination="5AK-sy-u8U" id="ML4-ro-arI"/>
+                        <outlet property="button8" destination="U6a-T5-fJ9" id="oQS-Wi-9s5"/>
+                        <outlet property="button9" destination="fDe-jY-8lQ" id="IBr-D5-TrR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S82-tq-3Wm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2528.8000000000002" y="123.68815592203899"/>
+        </scene>
+        <!--Allergi Reg View Controller-->
+        <scene sceneID="C2f-ZS-nRR">
+            <objects>
+                <viewController id="rub-Bs-2hM" customClass="AllergiRegViewController" customModule="foodle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9wD-ji-FFq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="6SK-AS-nXq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2Q-5I-p88" customClass="MyButton" customModule="foodle" customModuleProvider="target">
+                                <rect key="frame" x="52" y="268" width="164" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="м'ясо баранини">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedB2:" destination="dyl-Ac-7cQ" eventType="touchUpInside" id="0NV-d0-erA"/>
+                                    <action selector="clickedP5:" destination="rub-Bs-2hM" eventType="touchUpInside" id="M3v-xQ-11M"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0I-Q0-TzQ" customClass="MyButton" customModule="foodle" customModuleProvider="target">
+                                <rect key="frame" x="52" y="306" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="молоко">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedB2:" destination="dyl-Ac-7cQ" eventType="touchUpInside" id="tNx-iI-Xm0"/>
+                                    <action selector="clickedP7:" destination="rub-Bs-2hM" eventType="touchUpInside" id="ywV-Cc-fhn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zzo-G8-4QN" customClass="MyButton" customModule="foodle" customModuleProvider="target">
+                                <rect key="frame" x="52" y="344" width="164" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="яйце перепилине">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedB2:" destination="dyl-Ac-7cQ" eventType="touchUpInside" id="XsA-Pf-q5Z"/>
+                                    <action selector="clickedP9:" destination="rub-Bs-2hM" eventType="touchUpInside" id="3cz-TG-tYQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="169-XE-Lq7" customClass="MyButton" customModule="foodle" customModuleProvider="target">
+                                <rect key="frame" x="52" y="382" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="помідори">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedB2:" destination="dyl-Ac-7cQ" eventType="touchUpInside" id="ShY-pA-wKM"/>
+                                    <action selector="clickedP11:" destination="rub-Bs-2hM" eventType="touchUpInside" id="Ekz-hi-EVf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8e-0g-6YY" customClass="MyButton" customModule="foodle" customModuleProvider="target">
+                                <rect key="frame" x="52" y="420" width="164" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="морська капуста">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedB2:" destination="dyl-Ac-7cQ" eventType="touchUpInside" id="YfY-gL-jmy"/>
+                                    <action selector="clickedP13:" destination="rub-Bs-2hM" eventType="touchUpInside" id="v1a-dN-CjN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NwV-Vo-wWO" customClass="MyButton" customModule="foodle" customModuleProvider="target">
+                                <rect key="frame" x="52" y="458" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="чорнослив">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedB2:" destination="dyl-Ac-7cQ" eventType="touchUpInside" id="pHS-k4-3Td"/>
+                                    <action selector="clickedP15:" destination="rub-Bs-2hM" eventType="touchUpInside" id="Wwp-fc-yL6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghe-mg-wXe" customClass="MyButton" customModule="foodle" customModuleProvider="target">
+                                <rect key="frame" x="169" y="230" width="164" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="м'ясо куряче">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedB2:" destination="dyl-Ac-7cQ" eventType="touchUpInside" id="gTg-ft-u6Q"/>
+                                    <action selector="clickedP4:" destination="rub-Bs-2hM" eventType="touchUpInside" id="4lw-Y2-C3W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8x-eT-UYt" customClass="MyButton" customModule="foodle" customModuleProvider="target">
+                                <rect key="frame" x="236" y="268" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="оливки">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedB2:" destination="dyl-Ac-7cQ" eventType="touchUpInside" id="6x4-AV-eAw"/>
+                                    <action selector="clickedP6:" destination="rub-Bs-2hM" eventType="touchUpInside" id="GQT-Pn-XgA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSq-JX-lmL" customClass="MyButton" customModule="foodle" customModuleProvider="target">
+                                <rect key="frame" x="169" y="306" width="164" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="яйце куряче">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedB2:" destination="dyl-Ac-7cQ" eventType="touchUpInside" id="bGP-t3-Wbf"/>
+                                    <action selector="clickedP8:" destination="rub-Bs-2hM" eventType="touchUpInside" id="ZC9-xU-uIh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wz8-Dm-8Ee" customClass="MyButton" customModule="foodle" customModuleProvider="target">
+                                <rect key="frame" x="236" y="344" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="кунжут">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedB2:" destination="dyl-Ac-7cQ" eventType="touchUpInside" id="d1U-o2-hgy"/>
+                                    <action selector="clickedP10:" destination="rub-Bs-2hM" eventType="touchUpInside" id="Z8g-It-yhE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Vl-EP-enM" customClass="MyButton" customModule="foodle" customModuleProvider="target">
+                                <rect key="frame" x="169" y="382" width="164" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="арахісове масло">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedB2:" destination="dyl-Ac-7cQ" eventType="touchUpInside" id="69U-kF-4Tc"/>
+                                    <action selector="clickedP12:" destination="rub-Bs-2hM" eventType="touchUpInside" id="pO5-EZ-Noz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fz1-jV-JkS" customClass="MyButton" customModule="foodle" customModuleProvider="target">
+                                <rect key="frame" x="236" y="420" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="філе щуки">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedB2:" destination="dyl-Ac-7cQ" eventType="touchUpInside" id="GmV-oJ-egG"/>
+                                    <action selector="clickedP14:" destination="rub-Bs-2hM" eventType="touchUpInside" id="aem-zO-oM9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sw4-wp-C9R" customClass="MyButton" customModule="foodle" customModuleProvider="target">
+                                <rect key="frame" x="236" y="192" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="маракуйя">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedB2:" destination="dyl-Ac-7cQ" eventType="touchUpInside" id="yEF-4i-B1Y"/>
+                                    <action selector="clickedP2:" destination="rub-Bs-2hM" eventType="touchUpInside" id="wfu-yU-TWm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c55-5q-nK1" customClass="MyButton" customModule="foodle" customModuleProvider="target">
+                                <rect key="frame" x="52" y="230" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="апельсин">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedB2:" destination="dyl-Ac-7cQ" eventType="touchUpInside" id="T49-yW-hLu"/>
+                                    <action selector="clickedP3:" destination="rub-Bs-2hM" eventType="touchUpInside" id="gql-qA-k0e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVI-e4-PrU" customClass="MyButton" customModule="foodle" customModuleProvider="target">
+                                <rect key="frame" x="52" y="192" width="164" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="м'ясо теляче">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedB1:" destination="dyl-Ac-7cQ" eventType="touchUpInside" id="XZb-wA-E41"/>
+                                    <action selector="clickedP1:" destination="rub-Bs-2hM" eventType="touchUpInside" id="NaR-Wy-wtG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="На які продукти у вас алергія?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tD9-4R-sSP">
+                                <rect key="frame" x="65" y="149" width="244" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Вже зареєстровані?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dY2-I2-oYW">
+                                <rect key="frame" x="106" y="581" width="162" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwD-Of-dQ4">
+                                <rect key="frame" x="194" y="528" width="134" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="ДАЛІ">
+                                    <color key="titleColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="enterMainPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VGW-SB-vdW"/>
+                                    <action selector="toAllergiReg:" destination="dyl-Ac-7cQ" eventType="touchUpInside" id="7gO-3T-ZCJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ymN-9c-cGu">
+                                <rect key="frame" x="52" y="528" width="134" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="НАЗАД">
+                                    <color key="titleColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="enterMainPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uwU-p3-jKc"/>
+                                    <segue destination="dyl-Ac-7cQ" kind="show" animates="NO" id="TSh-9S-HHB"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="CRi-iu-WrV">
+                                <rect key="frame" x="109" y="20" width="157" height="111"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44T-ZT-QC7">
+                                <rect key="frame" x="160" y="610" width="56" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Ввійти">
+                                    <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backToLogin:" destination="M3H-Yt-xEK" eventType="touchUpInside" id="2Ck-2O-Gxg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03k-xu-EKI" customClass="MyButton" customModule="foodle" customModuleProvider="target">
+                                <rect key="frame" x="169" y="458" width="164" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="думка суспільства">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedB2:" destination="dyl-Ac-7cQ" eventType="touchUpInside" id="s2p-gi-6SB"/>
+                                    <action selector="clickedP16:" destination="rub-Bs-2hM" eventType="touchUpInside" id="paz-29-qqj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="eLR-Zg-ZkX"/>
+                    </view>
+                    <connections>
+                        <outlet property="Product1" destination="HVI-e4-PrU" id="tc6-P6-Lwb"/>
+                        <outlet property="Product10" destination="Wz8-Dm-8Ee" id="sZM-bR-azJ"/>
+                        <outlet property="Product11" destination="169-XE-Lq7" id="1NR-ee-h5b"/>
+                        <outlet property="Product12" destination="4Vl-EP-enM" id="Sob-dr-Inf"/>
+                        <outlet property="Product13" destination="N8e-0g-6YY" id="AST-FF-ZAB"/>
+                        <outlet property="Product14" destination="Fz1-jV-JkS" id="urb-VG-o3R"/>
+                        <outlet property="Product15" destination="NwV-Vo-wWO" id="CcT-sa-Oxu"/>
+                        <outlet property="Product16" destination="03k-xu-EKI" id="HSq-n4-ega"/>
+                        <outlet property="Product2" destination="sw4-wp-C9R" id="x48-SC-LLH"/>
+                        <outlet property="Product3" destination="c55-5q-nK1" id="hOb-I0-SeD"/>
+                        <outlet property="Product4" destination="ghe-mg-wXe" id="lvB-KL-kqU"/>
+                        <outlet property="Product5" destination="x2Q-5I-p88" id="00J-xR-DB3"/>
+                        <outlet property="Product6" destination="L8x-eT-UYt" id="DMk-q0-af7"/>
+                        <outlet property="Product7" destination="H0I-Q0-TzQ" id="pgP-v0-FfX"/>
+                        <outlet property="Product8" destination="OSq-JX-lmL" id="zvM-uJ-kDm"/>
+                        <outlet property="Product9" destination="Zzo-G8-4QN" id="g0h-R8-SL7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ul-pH-98N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3277.5999999999999" y="123.68815592203899"/>
         </scene>
     </scenes>
     <resources>
@@ -384,7 +949,9 @@
         <image name="logo" width="641" height="580"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aSb-5o-5Du"/>
-        <segue reference="Q5s-5x-UUy"/>
+        <segue reference="TSh-9S-HHB"/>
+        <segue reference="8Da-m9-V61"/>
+        <segue reference="yJ1-5s-ZFX"/>
+        <segue reference="dl6-LG-xhx"/>
     </inferredMetricsTieBreakers>
 </document>
