@@ -33,6 +33,20 @@ class AllergiRegViewController: MyViewController {
     
     //MARK: Actions
     
+    @IBAction func toLoginAfterReg(_ sender: UIButton) {
+        performSegue(withIdentifier: "loginAfterRegSeq", sender: self)
+    }
+    
+    @IBAction func backToReg(_ sender: UIButton) {
+        performSegue(withIdentifier: "backToLoginSeq", sender: self)
+    }
+    
+    
+    
+    
+    
+    
+    
     @IBAction func clickedP1(_ sender: MyButton) {
         sender.toggle()
     }
